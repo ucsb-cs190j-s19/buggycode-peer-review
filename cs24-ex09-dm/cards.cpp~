@@ -1,0 +1,48 @@
+//cards.cpp
+//Authors: Huiyu Zhang
+//Implementation of the classes defined in cards.h
+
+#include <ostream>
+#include "cards.h"
+
+bool Card::operator==(const Card other) {
+  return this.suit == other.suit && this.rank == other.rank;
+}
+ostream& operator<< (ostream& os, const Card& card) {
+  os<<card.rank<<" "<<card.suit;
+}
+Hand::~Hand() {
+  delete head;
+}
+Node::~Node() {
+  delete next;
+}
+void Hand::append(const char suit, const char rank) {
+  Card temp(suit, rank);
+  Node tmp(temp);
+  if (head == 0) {
+    head = tmp;
+  } else {
+    Node* t = head;
+    while (t->next) {
+      t = t->next;
+    }
+    t->next = tmp;
+  }
+}
+Node& Player::search(const Card card) {
+  Node* temp = hand.head;
+  while (temp) {
+    if (temp->info == card) {
+      return *temp;
+    }
+  }
+  return 0;
+}
+void Player::remove(Card& card) {
+  Node* temp = search(card);
+  if(!temp)return;
+  if(temp == hand.head) head = head->next;
+  temp = temp->next;
+  delete temp;
+}

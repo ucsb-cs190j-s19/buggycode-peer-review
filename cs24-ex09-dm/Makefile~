@@ -1,0 +1,5 @@
+main.o: main.cpp cards.h
+testcards.o: testcards.h testcards.cpp
+	g++ testcards.cpp -c
+cards.o: cards.h cards.cpp
+	g++ cards.cpp -c
