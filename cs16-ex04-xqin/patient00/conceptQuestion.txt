@@ -1,0 +1,13 @@
+This is a possible list of conceptual questions
+
+1.  Why don't the values swap (referring to the pass-by-value example).
+
+(This was from someone in Lawton's class, referring to lecture slides on pass by value; some background, they have
+not covered how to pass by reference, just why pass by value doesn't work.
+Also, they haven't gone over scope D:)
+
+2. What is ifs?
+
+3. Why does the main function have the "main(int argc, char* argv[])?
+    a. Follow up: what are the benefits of using command line arguments?
+    b. Follow up: What is the purpose of the "if(argc != 2)" for?
