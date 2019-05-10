@@ -1,0 +1,9 @@
+1) Conceptual Question:
+What is the difference between a reference and a pointer
+
+Why can't the compiler find the header file utility.h?
+g++ countEvens.cpp -o countEvens
+
+2) Programming / Debugging Question:
+How do I count the number of even numbers in in an array? 
+More specifically, how do I go through each element in the array?
