@@ -61,7 +61,7 @@ def recursiveReverseList(L):
 
 
 ########################################
-"""
+
 newestList = []
 n = 0
 
@@ -101,7 +101,7 @@ def recursiveAccumulateVowels(s):
             recursiveAccumulateVowels(s)
     return newestList
     
-"""
+
 
 
 
